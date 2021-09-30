@@ -76,3 +76,8 @@ button{
 button[id=save-btn]{
     background: green;
 }
+
+#save-el{
+    font-size: 3rem;
+    font-weight: 800;
+}
