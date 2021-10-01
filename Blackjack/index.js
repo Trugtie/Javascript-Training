@@ -45,6 +45,27 @@
 // console.log(numbers.length);
 
 
+// let myInfo = ["Tien",12,true];
+// console.log(myInfo)
+
+// let messages = [
+//     "Hey, how's it going?",
+//     "I'm great, thank you! How about you?",
+//     "All good. Been working on my portfolio lately."
+// ]
+
+// let newMessage = "Same here!"
+
+// messages.push(newMessage);
+// console.log(messages);
+
+// messages.pop();
+// console.log(messages);
+
+// for (let i=10;i<=100;i+=10){
+//     console.log(i);
+// }
+
 let firstCard=10;
 let secondCard=11;
 let cards=[firstCard,secondCard];
@@ -58,7 +79,7 @@ let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 function renderGame(){
-    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+    cardsEl.textContent = "Cards: " + cards;
     sumEl.textContent = "Sum: " + sum;
     if(sum<=20){
         message = "Do you want to draw a new card?";
@@ -77,7 +98,8 @@ function newCard(){
     console.log("Drawing a new card from the deck!");
     let card=8;
     sum+=card;
-    startGame();
+    cards.push(card);
+    renderGame();
 }
 
 function startGame(){
