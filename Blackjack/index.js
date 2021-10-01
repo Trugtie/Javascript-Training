@@ -54,6 +54,10 @@
 //     "All good. Been working on my portfolio lately."
 // ]
 
+// for (let i=0;i<messages.length;i+=1){
+//     console.log(messages[i]);
+// }
+
 // let newMessage = "Same here!"
 
 // messages.push(newMessage);
@@ -66,8 +70,35 @@
 //     console.log(i);
 // }
 
-let firstCard=10;
-let secondCard=11;
+// let cardss=[7,3,9];
+
+// for (let i=0;i<cardss.length;i+=1){
+//     console.log(cardss[i]);
+// }
+
+// let sentence = ["Hello","my","name","is","Per"]
+// let greetingEl=document.querySelector("#greeting-el");
+
+// for (let i = 0 ; i<sentence.length; i++){
+//     greetingEl.textContent += sentence[i]+" ";
+// }
+
+// let player1Time=102;
+// let player2Time=107;
+// function totalRaceTime(){
+//     return player1Time+player2Time;
+// };
+// let total=totalRaceTime();
+// console.log(total);
+
+// let randomNumber = Math.floor(Math.random() * 6) + 1;
+// console.log(randomNumber);
+
+// let flooredNumber=Math.floor(4.0632);
+// console.log(flooredNumber);
+
+let firstCard=getRandomCard();
+let secondCard=getRandomCard();
 let cards=[firstCard,secondCard];
 let sum=firstCard+secondCard;
 let hasBlackjack=false;
@@ -78,8 +109,15 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
+function getRandomCard(){
+    return 5;
+}
+
 function renderGame(){
-    cardsEl.textContent = "Cards: " + cards;
+    cardsEl.textContent = "Cards: "
+    for(let i = 0; i < cards.length ; i++){
+        cardsEl.textContent+=cards[i] + " ";
+    }
     sumEl.textContent = "Sum: " + sum;
     if(sum<=20){
         message = "Do you want to draw a new card?";
@@ -96,7 +134,7 @@ function renderGame(){
 
 function newCard(){
     console.log("Drawing a new card from the deck!");
-    let card=8;
+    let card=getRandomCard();
     sum+=card;
     cards.push(card);
     renderGame();
@@ -105,3 +143,4 @@ function newCard(){
 function startGame(){
     renderGame();
 }
+
