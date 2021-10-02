@@ -149,6 +149,37 @@
 // console.log(castle.name);
 // console.log(castle.array)
 
+//Practice 2
+// let person = {
+//     name:"Peter",
+//     age:12,
+//     country:"United States"
+// }
+
+// function logData(){
+//     console.log(person.name+" is "+person.age+" years old and lives in "+person.country);
+// }
+
+// logData();
+
+// let age=67;
+// if(age < 6){
+//     console.log("free")
+// }
+// else if( age >=6 && age <=17){
+//     console.log("child discount")
+// }
+// else if(age >= 18 && age <=26){
+//     console.log("student discount")
+// }
+// else if(age >=27 && age <=66){
+// console.log("full price")
+// }
+// else
+// {
+//     console.log("senior citizen discount")
+// }
+
 let cards=[];
 let sum=0;
 let hasBlackjack=false;
