@@ -97,20 +97,85 @@
 // let flooredNumber=Math.floor(4.0632);
 // console.log(flooredNumber);
 
-let firstCard=getRandomCard();
-let secondCard=getRandomCard();
-let cards=[firstCard,secondCard];
-let sum=firstCard+secondCard;
+// function rollDice(){
+//     return Math.floor(Math.random()*6)+1;
+// };
+
+// console.log(rollDice());
+
+// let hasSolvedChallenge = true;
+// let hasHintsLeft = false;
+
+// if (hasSolvedChallenge===false,hasHintsLeft===false){
+//     showSolution();
+// }
+
+// let likesDocumentaries=true;
+// let likesStartups=false;
+
+// if(likesDocumentaries===true || likesStartups===true){
+//     recommendMovie();
+// }
+
+
+// function recommendMovie(){
+//     console.log("Hey, check out this new film we think you will like!");
+// }
+
+// function showSolution(){
+//     console.log("Showing the solution....");
+// }
+
+// let course = {
+//     title: "Learn CSS Grid for free",
+//     lessons: 16,
+//     creator: "Per Harald Borgen",
+//     length:63,
+//     level:2,
+//     isFree:true,
+//     tags: ["html","css"]
+// }
+
+// console.log(course.tags);
+// console.log(course["tags"]);
+
+// let castle = {
+//     isNumber: true,
+//     name: "De",
+//     number: 2,
+//     array: [1,2,3,4]
+// }
+
+// console.log(castle.name);
+// console.log(castle.array)
+
+let cards=[];
+let sum=0;
 let hasBlackjack=false;
-let isAlive=true;
+let isAlive=false;
 let message="";
 let messageEl = document.getElementById("message-el");
 // let sumEl = document.getElementById("sum-el");
 let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
 
+let player={
+    name:"De",
+    chips:2000,
+    sayHello: function(){
+        console.log("Hewo :3")
+    }
+}
+
+
+let playerEl=document.getElementById("player-el")
+playerEl.textContent=player.name+": $" + player.chips;
+
 function getRandomCard(){
-    return 5;
+    let randomCard=Math.floor(Math.random()*13)+1;
+    if(randomCard === 1) return 11;
+    else if (randomCard >=11 && randomCard <=13) return 10;
+    else return randomCard;
 }
 
 function renderGame(){
@@ -121,10 +186,14 @@ function renderGame(){
     sumEl.textContent = "Sum: " + sum;
     if(sum<=20){
         message = "Do you want to draw a new card?";
-    }else if(sum===21){
+    }else if(sum===21 && cards.length<3){
         message = "You've got Blackjack!"
         hasBlackjack=true;
-    }else{
+    }
+    else if(sum===21){
+        message="You've got 21 point!"
+    }
+    else{
         message = "You're out of the game!"
         isAlive=false;
     }
@@ -134,13 +203,21 @@ function renderGame(){
 
 function newCard(){
     console.log("Drawing a new card from the deck!");
-    let card=getRandomCard();
-    sum+=card;
-    cards.push(card);
-    renderGame();
+    if(isAlive===true&&hasBlackjack===false && sum <21){
+        let card=getRandomCard();
+        sum+=card;
+        cards.push(card);
+        renderGame();
+    }
 }
 
 function startGame(){
+    isAlive=true;
+    hasBlackjack=false;
+    let firstCard=getRandomCard();
+    let secondCard=getRandomCard();
+    cards=[firstCard,secondCard];
+    sum=firstCard+secondCard;
     renderGame();
 }
 
