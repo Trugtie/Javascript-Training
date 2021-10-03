@@ -180,6 +180,33 @@
 //     console.log("senior citizen discount")
 // }
 
+// let largeCountries = ["Tuvalu","India","USA","Indonesia","Monaco"];
+
+// largeCountries.pop();
+// largeCountries.push("Pakistan");
+// largeCountries.shift();
+// largeCountries.unshift("China");
+
+// console.log("The 5 largst countries in the world: ");
+// for(let i = 0 ; i < largeCountries.length; i++){
+//     console.log("- " + largeCountries[i]);
+// }
+
+// let dayOfMonth=13;
+// let weekday="Friday";
+
+// if(dayOfMonth===13 && weekday==="Friday"){
+//     console.log("Horror Day!");
+// }
+
+let hands=["rock","paper","scissor"];
+
+function randomHands(){
+    return hands[Math.floor(Math.random()*3)];
+}
+
+console.log(randomHands());
+
 let cards=[];
 let sum=0;
 let hasBlackjack=false;
