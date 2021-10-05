@@ -65,7 +65,7 @@
 
 // console.log(getFirst([5,8,7,3]))
 
-// let myLeads=[];
+let myLeads=[];
 
 // myLeads=JSON.parse(myLeads);
 // myLeads.push("www.facebook.com");
@@ -125,3 +125,20 @@ button.addEventListener("click", function () {
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
   render(myLeads);
 });
+
+
+//practice
+// let player="Per"
+// let opponent="Nick"
+// let game="AmazingFighter"
+// const points=0
+// const hasWon=false
+
+// points+=100
+// hasWon=true
+
+// if(hasWon) {
+//   console.log(player + " got " + points + " points and won the " + game + " game!")
+// }else{
+//   console.log("The winner is "+opponent+"! "+player+" lost the game")
+// }
