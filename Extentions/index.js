@@ -128,17 +128,78 @@ button.addEventListener("click", function () {
 
 
 //practice
-// let player="Per"
-// let opponent="Nick"
-// let game="AmazingFighter"
-// const points=0
-// const hasWon=false
+// const player="Per"
+// const opponent="Nick"
+// const game="AmazingFighter"
+
+// let points=0
+// let hasWon=false
 
 // points+=100
 // hasWon=true
 
 // if(hasWon) {
-//   console.log(player + " got " + points + " points and won the " + game + " game!")
+//   console.log(`
+//   ${player} got ${points} points and won the ${game} game!
+//   `)
 // }else{
-//   console.log("The winner is "+opponent+"! "+player+" lost the game")
+//   console.log(`The winner is ${opponent}! ${player} lost the game`)
 // }
+
+// let myCourses=["Learn CSS Animations","UI Design Fundamentals","Intro to Clean Code"]
+
+// function showArray(array){
+//   for (let i = 0; i<array.length ; i++){
+//     console.log(array[i])
+//   }
+// }
+
+// showArray(myCourses)
+
+// let data = [
+//   {
+//     player:"Jane",
+//     score:52
+//   },
+//   {
+//     player:"Mark",
+//     score:41
+//   }
+// ]
+
+// const logBtn=document.querySelector("#log-btn")
+// logBtn.addEventListener("click",function(){
+//   console.log(`${data[0].player}'s score: ${data[0].score} `)
+// })
+
+// function generateSentence(desc,arr){
+//   let basString=`${desc}`
+//   for(let i=0;i<arr.length;i++){
+//     if(arr[arr.length-1]){
+//       basString+= `${arr[i]} `
+//     }
+//     else{
+//       basString+=`${arr[i]}, `
+//     }
+//   }
+//   return console.log(basString)
+// }
+
+// generateSentence("The 2 best fruits are ",["Apples","Bananas"])
+
+// function generateSentence(desc,arr){
+//   let baseString=`The ${arr.length} ${desc} are `
+//   const lastIndex=arr.length-1
+//   for(let i=0;i<arr.length;i++){
+//     if(i==lastIndex){
+//       baseString+=arr[i]
+//     }else{
+//       baseString+=arr[i]+", "
+//     }
+//   }
+//   return baseString
+// }
+
+// const sentence=generateSentence("highest mountains",["Mount Everest","K2"])
+
+// console.log(sentence)
