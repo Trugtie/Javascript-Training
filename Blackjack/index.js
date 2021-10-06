@@ -212,12 +212,12 @@ let sum=0;
 let hasBlackjack=false;
 let isAlive=false;
 let message="";
-let messageEl = document.getElementById("message-el");
+const messageEl = document.getElementById("message-el");
 // let sumEl = document.getElementById("sum-el");
-let sumEl = document.querySelector("#sum-el");
-let cardsEl = document.getElementById("cards-el");
+const sumEl = document.querySelector("#sum-el");
+const cardsEl = document.getElementById("cards-el");
 
-let player={
+const player={
     name:"De",
     chips:2000,
     sayHello: function(){
@@ -226,7 +226,7 @@ let player={
 }
 
 
-let playerEl=document.getElementById("player-el")
+const playerEl=document.getElementById("player-el")
 playerEl.textContent=player.name+": $" + player.chips;
 
 function getRandomCard(){
