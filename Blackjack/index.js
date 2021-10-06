@@ -199,13 +199,13 @@
 //     console.log("Horror Day!");
 // }
 
-let hands=["rock","paper","scissor"];
+// let hands=["rock","paper","scissor"];
 
-function randomHands(){
-    return hands[Math.floor(Math.random()*3)];
-}
+// function randomHands(){
+//     return hands[Math.floor(Math.random()*3)];
+// }
 
-console.log(randomHands());
+// console.log(randomHands());
 
 let cards=[];
 let sum=0;
